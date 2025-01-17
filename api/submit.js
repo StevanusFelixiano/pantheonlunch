@@ -36,7 +36,7 @@ app.post("/api/submit", async (req, res) => {
     const { name, orders } = req.body;
 
     if (!name || !orders) {
-      return res.status(400).send("Nama dan pesanan harus diisi.");
+      return res.status(400).json({ success: false, message: "Nama dan pesanan harus diisi." });
     }
 
     const values = [
@@ -53,10 +53,13 @@ app.post("/api/submit", async (req, res) => {
       },
     });
 
-    res.status(200).send("Data berhasil dikirim ke Google Sheets!");
+    res.status(200).json({ success: true, message: "Data berhasil dikirim ke Google Sheets!" });
   } catch (error) {
     console.error("Error saat mengirim data ke Google Sheets:", error);
-    res.status(500).send("Terjadi kesalahan saat mengirim data.");
+    res.status(500).json({
+      success: false,
+      message: "Terjadi kesalahan saat mengirim data."
+  });  
   }
 });
 
