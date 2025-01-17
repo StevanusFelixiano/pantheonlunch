@@ -28,7 +28,10 @@ app.post("/submit", async (req, res) => {
       return res.status(400).send("Nama dan pesanan harus diisi.");
     }
 
-    const values = [[name, JSON.stringify(orders)]];
+    const values = [
+      [name, orders.map(order => `${order.name} (${order.quantity})`).join(", ")]
+    ];
+    
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: SHEET_ID,
