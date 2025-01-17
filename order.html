@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Order</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+        }
+
+        .segmen1 {
+            border: 0px solid red;
+        }
+
+        .link {
+            text-decoration: none;
+            color: #f9e6c4;
+            font-family: "Outfit", serif;
+            font-size: 5rem;
+            margin-top: 2%;
+        }
+
+        .ins {
+            color: #EEEEEE;
+            margin-top: -1%;
+            font-family: "Outfit", serif;
+            font-size: 1.4rem;
+        }
+
+        .segmen2 {
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+
+        .teks1 {
+            color: #EEEEEE;
+            font-family: "Outfit", serif;
+            font-size: 2rem;
+            border: 0px solid red;
+        }
+
+        .nama {
+            width: 25%;
+            height: 5vh;
+            margin-left: 1%;
+            font-family: "outfit", serif;
+            font-size: 1.5rem;
+            background-color: #393E46;
+            color: #f9e6c4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            /* Space between each row */
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            /* Align items vertically */
+            justify-content: space-between;
+            /* Push items to the edges */
+            border: 1px solid transparent;
+            /* Optional for debugging alignment */
+        }
+
+        .row .product-name {
+            flex: 1;
+            /* Takes up the remaining space */
+            font-size: 1.2rem;
+            color: #EEEEEE;
+            font-family: "Outfit", serif;
+            font-weight: bold;
+            padding: 0.2rem 0;
+            /* Optional for spacing */
+        }
+
+        .row .quantity {
+            width: 4rem;
+            /* Fixed width for input fields */
+            text-align: center;
+            /* Center-align the numbers */
+            height: 2rem;
+            line-height: 2rem;
+            background-color: #393E46;
+            color: #EEEEEE;
+            border: 1px solid #EEEEEE;
+            border-radius: 4px;
+            font-family: "Outfit", serif;
+        }
+
+        .submit-container {
+            display: flex;
+            justify-content: end;
+            /* Centers the button horizontally */
+            margin: 3rem -1.4rem 3rem 0;
+            /* Adds some spacing from the form */
+        }
+
+        .submit-button {
+            background-color: #393E46;
+            /* Matches the dark theme */
+            color: #EEEEEE;
+            /* Text color matching the theme */
+            font-family: "Outfit", serif;
+            /* Matches the font used in the theme */
+            font-size: 1.2rem;
+            /* Adjusted font size for readability */
+            font-weight: bold;
+            /* A border to match the theme */
+            border-radius: 8px;
+            /* Rounded corners for a modern look */
+            padding: 1rem 1.7rem;
+            /* Padding for a comfortable button size */
+            cursor: pointer;
+            /* Changes cursor to pointer on hover */
+            transition: background-color 0.3s, color 0.3s;
+            /* Smooth hover effect */
+        }
+
+        .submit-button:hover {
+            background-color: #EEEEEE;
+            /* Inverts the button's background color */
+            color: #393E46;
+            /* Inverts the text color */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row segmen1">
+            <a class="link" href="https://drive.google.com/file/d/1PtEQmwC6vbtyamy7v5JINOAmsXQy8gJ4/view?usp=sharing">Menu</a>
+            <div class="ins">Click on the "Menu" to view the menu</div>
+        </div>
+        <div class="row segmen2">
+            <div class="teks1">Nama :<input class="nama" type="text"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="product-name">Casiosu Panggang Puff</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Portugis Tart</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Egg Tart Special</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Exclusive Bag Puff Pastry</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Scaltier Pancake Puff</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Curry Puff Ayam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Curry Puff Ayam Lada Hitam</div>
+                <input type="number" class="quantity" value="-0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Curry Puff Sayur</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Hongkong Scallion Pancake</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Lobak Goreng XO Seafood</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Keladi Ukok</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Lobak Goreng XO Telur</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Lobak Keladi Panggang</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Irisan Keladi Goreng Wangi</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Lobak Goreng Biasa</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Pao Casio Ala Hongkong</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Len Yong Pao Telur Asin</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Mantau Goreng</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Casio Pao Goreng</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Pao Red Bean</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Pao Isi Sayur</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Hakau Udang</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Shumai Ayam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Shumai Rumput Laut</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Shumai Udang</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Shumai Ayam Mentai</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Shumai Ayam Mozarella</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Shumai Salmon</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Wang Kung Kao</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Pangsit Ikan</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Fanko Ala Tiociu</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Hakau Udang Sayur</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kaicak Steam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Lo May Kai</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Paikut Kambing Lada Hitam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Paikut Kambing Original</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Cintol Isi Kacang</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Crunchy Wanton Tower</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Wotie</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kaki Ayam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Leng Hong Kien</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Hairy Ball</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Labu Emas Malaiko</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Steam Pangsit Ala Thai</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Cintol Isi Durian</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Pangsit Udang Goreng Mayonnaise</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Lumpia Udang Kulit Tahu</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Spring Roll</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Bola Udang</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Crispy Mushroom</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Stick Roll</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Vietnam Spring Roll</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Cakue Ala Hai Kou</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Lumpia Rumput Laut</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Crispy Chicken</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Hainan Chicken Rice</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Steam Kaki Ayam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Steam Daging Ayam Cincang</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Steam Daging Ayam Ikan Asin</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Steam Sapi Ala Hongkong</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Steam Bebek Angsio</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Cong Fen Polos</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Cong Fen Gulung Popia</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Cong Fen Udang</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Special Red Rice Flour Roll</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Cong Fen Ayam Chasio</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Mie Haikou Kaki Ayam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Mie Haikou Ayam Pangsit</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Mie Laksa</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Mie Haikou Bebek Angsio</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Mie Haikou Sapi</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Soup Burung Dara</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Soup Ayam Ramuan Herbal</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Soup Jagung Kepiting</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Sapi Lada Hitam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Ayam Lada Hitam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Ayam Kungpao</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Ayam Mentega</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Ayam Asam Manis</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Tim Ayam Bambu</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Goreng Ayam Casio</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Goreng Kambing</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Goreng Sapi</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Goreng Seafood</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nasi Goreng Telur</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Ifumie Siram Binjai</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Ifumie Seafood</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Ifumie Telur</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Mie Jawa</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Mie Kangkung Belacan</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kwetiau Sapi</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kwetiau Siram</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kwetiau Seafood</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kwetiau Telur</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kwetiau Polos</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Bihun Sapi</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Bihun Seafood</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Bihun Telur</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Bihun Polos</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Bubur Ayam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Bubur Udang</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Bubur Ikan</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Bubur Polos</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Add Ons: Telur Asin</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Telur</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Cakue</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Chinese Tea</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Matcha</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Chocolate</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kopi Susu</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kopi Hitam</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Guava</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Mangga</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Dragon Fruit</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Alpukat</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Sirsak</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Carrot</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Sawi Nanas</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kedondong</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Melon</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Nanas</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Belimbing</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Tomat</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Orange</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Markisa</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Semangka</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Es Longan Jagung</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Honey Lemon (Ice)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Honey Lemon (Hot)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Thai Milk Tea (Ice)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Thai Milk Tea (Hot)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Fresh Lemon (Ice)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Fresh Lemon (Hot)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Lemon Tea (Ice)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Lemon Tea (Hot)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Tea Kundur</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Honey (Ice)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Honey (Hot)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Es Cincau</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Milo (Ice)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Milo (Hot)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Badak</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Sirup Kurnia</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">O-Cha (Ice)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">O-Cha (Hot)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Teh Manis (Ice)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Teh Manis (Hot)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Teh Pahit (Ice)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Teh Pahit (Hot)</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Air Mineral</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Chocolate Pudding</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Coconut Pudding</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Thai Coconut</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Kaya Toast + Half Boiled Egg</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Chicken Curry Rice</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Malaysia Dry Wonton Noodle</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Seechuan Noodle</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Duck Beehoon</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+            <div class="row">
+                <div class="product-name">Cintol Pasir Emas</div>
+                <input type="number" class="quantity" value="0" min="0" />
+            </div>
+        </div>
+
+        <div class="submit-container">
+            <button class="submit-button">Submit</button>
+        </div>
+
+
+    </div>
+    </div>
+
+</body>
+
+</html>
