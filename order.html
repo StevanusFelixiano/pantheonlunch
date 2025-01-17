@@ -835,6 +835,42 @@
             <button class="submit-button">Submit</button>
         </div>
     </div>
+    <script>
+        document.getElementById('submit').addEventListener('click', async () => {
+            const nama = document.querySelector('.nama').value;
+            const quantities = Array.from(document.querySelectorAll('.quantity')).map(input => ({
+                name: input.parentElement.querySelector('.product-name').innerText,
+                quantity: input.value
+            }));
+
+            const orders = quantities.filter(item => item.quantity > 0);
+
+            if (!nama || orders.length === 0) {
+                alert('Please enter your name and select at least one product.');
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:3000/api/orders', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ nama, orders }),
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    alert('Order submitted successfully!');
+                } else {
+                    alert('Failed to submit order!');
+                }
+            } catch (error) {
+                console.error('Error submitting order:', error);
+                alert('An error occurred while submitting the order.');
+            }
+        });
+    </script>
 </body>
 
 </html>
