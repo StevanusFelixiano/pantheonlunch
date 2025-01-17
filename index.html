@@ -11,47 +11,37 @@
     <style type="text/css">
         body {
             background-color: #1F1F1F;
-            width: 99%;
+            width: 100%;
             display: flex;
-            height: 500%;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
         }
-
-        
 
         .segmen1 {
             text-align: center;
             margin-top: 5%;
-            border: 0px solid purple;
         }
 
         .teks {
             font-family: "Outfit", serif;
             font-weight: bold;
-
             font-size: 4vw;
             color: #EEEEEE;
         }
 
-
         .segmen2 {
-            height: 40%;
-
             text-align: center;
-            border: 0px solid purple;
             margin-top: 2%;
         }
 
         .logo {
-            height: auto;
             width: 100%;
             max-width: 30vw;
-            border: 0px solid red
+            height: auto;
         }
 
         .segmen3 {
-
-            border: 0px solid purple;
-            height: 7vw;
             text-align: center;
             margin-top: 3%;
         }
@@ -63,7 +53,6 @@
             font-weight: 600;
             font-size: 2.4vw;
             color: #EEEEEE;
-            text-decoration: none;
             padding: 1.4vw 2.2vw;
             text-align: center;
             background-color: #393E46;
@@ -74,9 +63,8 @@
             color: #f9e6c4;
         }
 
-
         .segmen4 {
-            border: 0px solid greenyellow;
+            text-align: center;
             margin-top: 4%;
         }
 
@@ -84,46 +72,77 @@
             font-family: "Outfit", serif;
             color: #EEEEEE;
             font-size: 1.3vw;
-            text-align: center;
             line-height: 2.2;
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
+            .teks {
+                font-size: 6vw;
             }
 
-            button {
-                width: 100%;
+            .logo {
+                max-width: 50%;
+            }
+
+            .button {
+                font-size: 4vw;
+                padding: 3vw 5vw;
+                border-radius: 3vw;
+            }
+
+            .info {
+                font-size: 3.5vw;
+            }
+
+            body {
+                padding: 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .teks {
+                font-size: 8vw;
+            }
+
+            .logo {
+                max-width: 70%;
+            }
+
+            .button {
+                font-size: 5vw;
+                padding: 4vw 6vw;
+            }
+
+            .info {
+                font-size: 4vw;
             }
         }
     </style>
-
 </head>
-
 
 <body>
     <div class="container">
-        <div class="row segmen1 ">
-            <div class="col teks"> Lunch With Pantheon</div>
+        <div class="row segmen1">
+            <div class="col teks">Lunch With Pantheon</div>
         </div>
         <div class="row segmen2">
-            <div class="col "><img class="logo" src="pantheon.png" alt=""></div>
+            <div class="col">
+                <img class="logo" src="pantheon.png" alt="Pantheon Logo">
+            </div>
         </div>
         <div class="row segmen3">
-            <div class="col"><a class="button" href="order.html">Order</a></div>
+            <div class="col">
+                <a class="button" href="order.html">Order</a>
+            </div>
         </div>
         <div class="row segmen4">
-            <div class="col info">Sunday, 19 January 2025<br>
+            <div class="col info">
+                Sunday, 19 January 2025<br>
                 12.00 P.M<br>
-                Haikou Dimsum Petisah, Jl. Rotan No.1 ABC</div>
+                Haikou Dimsum Petisah, Jl. Rotan No.1 ABC
+            </div>
         </div>
     </div>
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
