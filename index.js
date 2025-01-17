@@ -1,10 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const { google } = require("googleapis");
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 
@@ -18,7 +20,6 @@ const auth = new google.auth.GoogleAuth({
 
 const sheets = google.sheets({ version: "v4", auth });
 
-// Endpoint untuk menerima data dari form
 app.post("/submit", async (req, res) => {
   try {
     const { name, orders } = req.body;
@@ -27,7 +28,7 @@ app.post("/submit", async (req, res) => {
       return res.status(400).send("Nama dan pesanan harus diisi.");
     }
 
-    const values = [[name, orders]];
+    const values = [[name, JSON.stringify(orders)]];
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: SHEET_ID,
