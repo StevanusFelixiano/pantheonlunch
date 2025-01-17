@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Lunch With Pantheon</title>
+    <style type="text/css">
+        body {
+            background-color: #1F1F1F;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .segmen1 {
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        .teks {
+            font-family: "Outfit", serif;
+            font-weight: bold;
+            font-size: 4vw;
+            color: #EEEEEE;
+        }
+
+        .segmen2 {
+            text-align: center;
+            margin-top: 2%;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 30vw;
+            height: auto;
+        }
+
+        .segmen3 {
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        .button {
+            text-decoration: none;
+            border-radius: 1.9vw;
+            font-family: "Outfit", serif;
+            font-weight: 600;
+            font-size: 2.4vw;
+            color: #EEEEEE;
+            padding: 1.4vw 2.2vw;
+            text-align: center;
+            background-color: #393E46;
+        }
+
+        .segmen3 a:hover {
+            background-color: #4c5158;
+            color: #f9e6c4;
+        }
+
+        .segmen4 {
+            text-align: center;
+            margin-top: 4%;
+        }
+
+        .info {
+            font-family: "Outfit", serif;
+            color: #EEEEEE;
+            font-size: 1.3vw;
+            line-height: 2.2;
+        }
+
+        @media (max-width: 768px) {
+            .teks {
+                font-size: 6vw;
+            }
+
+            .logo {
+                max-width: 50%;
+            }
+
+            .button {
+                font-size: 4vw;
+                padding: 3vw 5vw;
+                border-radius: 3vw;
+            }
+
+            .info {
+                font-size: 3.5vw;
+            }
+
+            body {
+                padding: 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .teks {
+                font-size: 8vw;
+            }
+
+            .logo {
+                max-width: 70%;
+            }
+
+            .button {
+                font-size: 5vw;
+                padding: 4vw 6vw;
+            }
+
+            .info {
+                font-size: 4vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row segmen1">
+            <div class="col teks">Lunch With Pantheon</div>
+        </div>
+        <div class="row segmen2">
+            <div class="col">
+                <img class="logo" src="pantheon.png" alt="Pantheon Logo">
+            </div>
+        </div>
+        <div class="row segmen3">
+            <div class="col">
+                <a class="button" href="order.html">Order</a>
+            </div>
+        </div>
+        <div class="row segmen4">
+            <div class="col info">
+                Sunday, 19 January 2025<br>
+                12.00 P.M<br>
+                Haikou Dimsum Petisah, Jl. Rotan No.1 ABC
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
