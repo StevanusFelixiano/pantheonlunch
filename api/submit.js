@@ -20,7 +20,7 @@ const auth = new google.auth.GoogleAuth({
 
 const sheets = google.sheets({ version: "v4", auth });
 
-app.post("api/submit", async (req, res) => {
+app.post("/api/submit", async (req, res) => {
   try {
     const { name, orders } = req.body;
 
