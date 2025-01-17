@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 
 
 const SHEET_ID = "1__AKMdWJAHEDTmb_KPnEcd7sOMsOx416-x5NLKqCXa0"; 
-const GOOGLE_API_CREDENTIALS = require("./credentials.json"); 
 
 const auth = new google.auth.GoogleAuth({
   credentials: {
